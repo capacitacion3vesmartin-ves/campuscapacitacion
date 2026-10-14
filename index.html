@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Campus Capacitación · Martin</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
+<link rel="icon" type="image/png" href="https://www.image2url.com/r2/default/images/1791992118496-6b59a052-ed20-4489-804e-9c63c0fdd611.png">
+  <style>
 :root{--g:#00963f;--gd:#06502a;--o:#f07d00;--bg:#f2f5f2;--card:#fff;--tx:#17261d;--mu:#66756b;--bd:#e0e7e1;--f:'Poppins',system-ui,sans-serif;--hb:#fff;--hg:var(--gd);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1410;--card:#17231b;--tx:#eef3ef;--mu:#9db0a3;--bd:#26372c;--hb:#101a14;--hg:#6fd39a}}
 :root[data-theme="dark"]{--bg:#0d1410;--card:#17231b;--tx:#eef3ef;--mu:#9db0a3;--bd:#26372c;--hb:#101a14;--hg:#6fd39a}
@@ -60,8 +61,9 @@ main{max-width:760px;margin:0 auto;padding:16px 5vw 0}
 .tg .bt:last-child:nth-child(odd){grid-column:1/-1;min-height:88px}
 .sec{width:100%;display:flex;align-items:center;gap:14px;text-align:left;border-radius:18px;padding:14px;margin-bottom:12px;border-left:5px solid var(--c)}
 .sec b{display:block;font-size:1rem;font-weight:700;line-height:1.15}.sec small{display:block;font-size:.74rem;color:var(--mu);margin-top:3px}
-.emp{display:flex;align-items:center;gap:14px;width:100%;margin-top:18px;padding:14px 16px;border:0;border-radius:18px;background:linear-gradient(110deg,var(--gd),var(--g));color:#fff;text-align:left;font-family:var(--f);cursor:pointer;box-shadow:0 14px 24px -14px var(--gd)}
+.emp{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;border:0;border-radius:18px;background:linear-gradient(110deg,var(--gd),var(--g));color:#fff;text-align:left;font-family:var(--f);cursor:pointer;box-shadow:0 14px 24px -14px var(--gd)}
 .emp:active{transform:scale(.97)}
+.emps{display:grid;gap:12px;margin-top:18px}
 .emp .ic{background:var(--o);box-shadow:none}
 .emp b{display:block;font-size:1rem;font-weight:800;line-height:1.15}
 .emp small{display:block;font-size:.74rem;opacity:.9;margin-top:2px}
@@ -76,7 +78,7 @@ dialog::backdrop{background:rgba(3,30,16,.66);backdrop-filter:blur(3px)}
 .dh{position:relative;display:flex;gap:14px;align-items:center;padding:20px 52px 20px 18px;color:#fff;background:var(--c)}
 .dh .ic{background:rgba(255,255,255,.2);box-shadow:none}
 .dh h3{margin:0;font-size:1.15rem;line-height:1.15}.dh p{margin:3px 0 0;font-size:.78rem;opacity:.92}
-.x{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:10px;border:0;background:rgba(0,0,0,.22);color:#fff;font-size:1.05rem;cursor:pointer}
+.x,.px{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:10px;border:0;background:rgba(0,0,0,.22);color:#fff;font-size:1.05rem;cursor:pointer}
 .db{padding:16px 16px 28px;overflow:auto;max-height:calc(90vh - 100px)}
 .gl{display:flex;align-items:center;gap:10px;margin:20px 0 10px;font-weight:800;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
 .gl:first-child{margin-top:2px}.gl:before{content:"";width:4px;height:14px;border-radius:2px;background:var(--c)}.gl:after{content:"";flex:1;height:1.5px;background:var(--bd)}
@@ -105,6 +107,19 @@ nav svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stro
 .wa b{display:block;font-size:1.05rem;font-weight:800}
 .wa small{display:block;font-size:.76rem;opacity:.95}
 
+/* Botón destacado con brillo (Cultura de servicio) */
+.tg .bt.hl{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:flex-start;gap:16px;min-height:104px;padding:16px 56px 16px 18px;border:0;color:#fff;border-radius:20px;
+background:linear-gradient(110deg,var(--o) 0%,var(--o) 38%,#ffd08a 50%,var(--o) 62%,var(--o) 100%);background-size:260% 100%;
+box-shadow:0 0 0 2px rgba(240,125,0,.35),0 16px 30px -12px var(--o);animation:hlsh 3.2s linear infinite,hlglow 2.4s ease-in-out infinite}
+.tg .bt.hl:before{display:none}
+.tg .bt.hl:after{background:rgba(255,255,255,.28);color:#fff;top:50%;transform:translateY(-50%)}
+.tg .bt.hl .ic{width:56px;height:56px;border-radius:17px;background:#fff;box-shadow:0 8px 16px -8px rgba(0,0,0,.4)}
+.tg .bt.hl .ic svg{width:30px;height:30px;stroke:var(--o);fill:rgba(240,125,0,.18)}
+.tg .bt.hl b{font-size:1.12rem;font-weight:800;margin-top:0}
+@keyframes hlsh{from{background-position:130% 0}to{background-position:-130% 0}}
+@keyframes hlglow{0%,100%{box-shadow:0 0 0 2px rgba(240,125,0,.3),0 14px 26px -12px var(--o)}50%{box-shadow:0 0 0 5px rgba(240,125,0,.18),0 0 26px 2px rgba(255,170,60,.65)}}
+@media (prefers-reduced-motion:reduce){.tg .bt.hl{animation:none}}
+
 /* Pantalla de PIN */
 body.locked{overflow:hidden}
 #gate{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;overflow:hidden;background:linear-gradient(135deg,var(--gd) 0%,#04803a 55%,var(--g) 100%);transition:opacity .4s}
@@ -127,6 +142,37 @@ body.locked{overflow:hidden}
 @media(hover:hover){.pad button:hover{border-color:var(--o)}}
 .shake{animation:shk .4s}
 @keyframes shk{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+
+/* Clave, corazón y carta */
+.pwi{width:100%;border:1.5px solid var(--bd);background:var(--card);color:var(--tx);border-radius:14px;padding:14px 16px;font:600 1rem var(--f);outline:none;letter-spacing:.04em}
+.pwi:focus{border-color:var(--o)}
+#pwe{min-height:1.4em;margin:8px 2px 10px;color:#e0264f;font-size:.82rem;font-weight:600}
+.pwb{width:100%;border:0;border-radius:14px;padding:14px;background:var(--o);color:#fff;font:700 1rem var(--f);cursor:pointer}
+.pwb:active{transform:scale(.97)}
+.back{display:inline-flex;align-items:center;gap:6px;margin:0 0 14px;padding:7px 14px 7px 10px;border:1.5px solid var(--bd);border-radius:999px;background:var(--card);color:var(--c);font:700 .78rem var(--f);cursor:pointer}
+.hfab{position:fixed;right:16px;bottom:calc(92px + env(safe-area-inset-bottom,0px));z-index:25;width:54px;height:54px;border-radius:50%;border:0;background:var(--o);display:grid;place-items:center;cursor:pointer;box-shadow:0 12px 22px -8px rgba(240,125,0,.7);animation:beat 2.6s ease-in-out infinite}
+.hfab svg{width:27px;height:27px;fill:#fff;stroke:#fff;stroke-width:1.5;stroke-linejoin:round}
+.hfab:active{transform:scale(.92)}
+@keyframes beat{0%,70%,100%{transform:scale(1)}78%{transform:scale(1.12)}86%{transform:scale(1)}92%{transform:scale(1.08)}}
+@media(min-width:1024px){.hfab{bottom:28px;right:28px}}
+#love{position:fixed;inset:0;z-index:150;display:grid;place-items:center;padding:20px;background:rgba(3,30,16,.62);backdrop-filter:blur(4px);animation:fi .3s}
+#love [hidden]{display:none!important}
+#love[hidden]{display:none}
+@keyframes fi{from{opacity:0}}
+.lx{position:absolute;right:16px;top:calc(16px + env(safe-area-inset-top,0px));width:40px;height:40px;border-radius:12px;border:0;background:rgba(255,255,255,.2);color:#fff;font-size:1.1rem;cursor:pointer}
+#love.card .lx{display:none}
+.letter{border:0;background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:16px;color:#fff;font:700 .95rem var(--f);animation:flt 5.5s ease-in-out infinite;filter:drop-shadow(0 22px 22px rgba(0,0,0,.4))}
+.letter svg{width:min(72vw,270px);height:auto;display:block}
+.letter span{opacity:.92}
+@keyframes flt{0%,100%{transform:translateY(10px) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
+.letter.go{animation:none;transform:scale(1.35);opacity:0;transition:transform .4s ease,opacity .4s ease}
+.lcard{position:relative;width:100%;max-width:380px;padding:34px 26px 30px;border-radius:26px;background:var(--card);color:var(--tx);text-align:center;border-top:6px solid var(--o);box-shadow:0 30px 60px -20px rgba(0,0,0,.5);animation:pop .5s cubic-bezier(.2,1.3,.4,1)}
+@keyframes pop{from{transform:scale(.6) translateY(30px);opacity:0}}
+.lcard .lh{width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:var(--o);display:grid;place-items:center}
+.lcard .lh svg{width:28px;height:28px;fill:#fff;stroke:#fff;stroke-width:1.5;stroke-linejoin:round}
+.lcard p{margin:0;font-size:1.05rem;line-height:1.6;font-weight:500}
+.lcx{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:10px;border:0;background:var(--bg);color:var(--mu);font-size:1rem;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.hfab,.letter{animation:none}}
 /* Control de música */
 
 /* ===== Vista PC (el celular queda igual) ===== */
@@ -166,7 +212,8 @@ body.locked{overflow:hidden}
   #tienda{grid-area:2/1/4/2}
   #home>.ttl:nth-child(3){grid-area:1/2}
   #secs{grid-area:2/2}
-  .emp{grid-area:3/2;margin-top:6px;padding:18px 20px;transition:transform .18s}
+  .emps{grid-area:3/2;margin-top:6px;gap:16px}
+  .emp{padding:18px 20px;transition:transform .18s}
   .emp:hover{transform:translateY(-3px)}
   .emp b{font-size:1.1rem}
   .ttl{margin:42px 0 18px;font-size:.84rem}
@@ -244,28 +291,38 @@ body.locked{overflow:hidden}
     <div id="tienda"></div>
     <div class="ttl">Mi formación</div>
     <div id="secs"></div>
-    <button class="emp" data-open="empresa"></button>
+    <div class="emps"><button class="emp" data-open="equipo"></button><button class="emp" data-open="empresa"></button></div>
   </div>
   <footer><b>Campus Capacitación Martin</b><br>Villa el Salvador · Puente Piedra · Piura · Arequipa</footer>
 </main>
 <dialog id="dlg"><div class="dh" id="dh"></div><div class="db" id="db"></div></dialog>
+<dialog id="pw" style="--c:#f07d00"><div class="dh"><span class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><h3>Acceso con clave</h3><p>Ingresa la clave para continuar</p></div><button class="px" id="px" type="button" aria-label="Cerrar">✕</button></div><div class="db"><input class="pwi" id="pwi" type="password" placeholder="Clave" autocomplete="off"><div id="pwe" role="alert"></div><button class="pwb" id="pwb" type="button">Ingresar</button></div></dialog>
+<button class="hfab" id="hfab" type="button" aria-label="Abrir mensaje especial"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></svg></button>
+<div id="love" hidden role="dialog" aria-modal="true" aria-label="Mensaje especial">
+<button class="lx" id="lx" type="button" aria-label="Cerrar">✕</button>
+<button class="letter" id="letter" type="button" aria-label="Abrir la carta"><svg viewBox="0 0 240 170" aria-hidden="true"><rect x="6" y="20" width="228" height="144" rx="16" fill="#fff" stroke="#f07d00" stroke-width="3"/><path d="M6 160l84-62M234 160l-84-62" fill="none" stroke="#f07d00" stroke-opacity=".45" stroke-width="3"/><path d="M6 40l114 82L234 40" fill="#fff4e6" stroke="#f07d00" stroke-width="3" stroke-linejoin="round"/><g transform="translate(97 78) scale(1.9)"><path fill="#e0264f" d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></g></svg><span>Toca la carta</span></button>
+<div class="lcard" id="lcard" hidden><button class="lcx" id="lcx" type="button" aria-label="Cerrar">✕</button><div class="lh"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></svg></div><p id="lmsg"></p></div>
+</div>
 <div class="toast" id="toast"></div>
 <script>
 /* ===== EDITA AQUÍ: pega el enlace de GitHub en cada u:"" ===== */
+const CLAVE="martin123"; /* clave de los simuladores con pw:1 */
+/* Mensajes de la carta del corazón: luego se llenará desde un Excel */
+const MENSAJES=["Cada día que enseñas y aprendes, dejas una huella en quienes te rodean. Gracias por ser parte de MARTIN: tu esfuerzo y tu sonrisa hacen grande a este equipo. Hoy es un buen día para brillar."];
 const WA='<svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9.2c.4 2.6 2.9 5.1 5.6 5.6l1.4-1.4-2-1-1 .8c-1-.5-2-1.5-2.5-2.5l.8-1-1-2z"/></svg>';
 const TIENDA=[
 {t:"Calculador de materiales",k:"calc",u:""},
 {t:"Consulta de productos",k:"search",u:"https://capacitacion3vesmartin-ves.github.io/consultaproductoscapa/"},
-{t:"Exhibidores",k:"grid",u:""},
-{t:"Catálogos de productos",k:"book",u:""},
-{t:"Fichas técnicas",k:"file",u:""},
+{t:"Exhibidores",k:"grid",o:"exhibidores"},
+{t:"Catálogos de productos",k:"book",u:"https://drive.google.com/drive/folders/1hvTK8ydHCbhY2HtKhfhAm_-3nO4E4W6e?usp=sharing"},
+{t:"Fichas técnicas",k:"file",u:"https://drive.google.com/drive/folders/1aGtX8XCEqWr4Bi82P5fSME4c4i97bVbk?usp=sharing"},
 {t:"Más herramientas",k:"more",o:"mas"}];
-const REP=[{t:"Actividades de repaso",k:"loop",u:""},{t:"Repaso Documentación",k:"doc",u:""},{t:"Recursos dinámicos",k:"game",u:""}];
-const COM=[{t:"Promociones",k:"tag",u:""},{t:"Mis recuerdos",k:"photo",u:""}];
+const REP=[{t:"Actividades de repaso",k:"loop",u:""},{t:"Repaso Documentación",k:"doc",u:""},{t:"Recursos dinámicos",k:"cross",u:""}];
+const COM=[{t:"Promociones",k:"cap",u:""},{t:"Mis recuerdos",k:"photo",u:""}];
 const SEC={
 ingreso:{t:"Capacitación de ingreso",d:"Tu primer recorrido como asesor",k:"flag",p:1,g:[
  {i:[{t:"Mis calificaciones",k:"star",u:""},{t:"Malla curricular",k:"map",u:""}]},
- {h:"Simuladores Sistemas",i:[{t:"Simulador Oracle",k:"sim",u:"https://capacitacion3vesmartin-ves.github.io/simuladororacle/"},{t:"Simulador Optiplanning",k:"sim",u:""},{t:"Simulador factura de contingencia",k:"sim",u:""}]},
+ {h:"Simuladores Sistemas",i:[{t:"Simulador Oracle",k:"sim",pw:1,u:"https://capacitacion3vesmartin-ves.github.io/simuladororacle/"},{t:"Simulador Optiplanning",k:"sim",pw:1,u:""},{t:"Simulador factura de contingencia",k:"sim",pw:1,u:""}]},
  {h:"Repaso de temas",i:REP},
  {h:"Comunidad",i:COM}]},
 escuela:{t:"Escuela de entrenamiento",d:"Notas y refuerzo de conocimientos",k:"cap",p:2,g:[
@@ -276,7 +333,13 @@ eval:{t:"Evaluaciones generales",d:"Balotario y resultados",k:"clip",p:4,g:[
  {i:[{t:"Balotario",k:"clip",u:""},{t:"Resultados",k:"chart",u:""}]}]},
 mas:{t:"Más herramientas",d:"Próximamente",k:"more",p:3,g:[],h:`<div class="soon"><b>Próximamente…</b><p>Pero si tienes una idea, déjanos tus sugerencias:</p></div><div class="wa-wrap"><a class="wa" href="https://w.app/dl4j9e" target="_blank" rel="noopener"><span class="ic">${WA}</span><span><b>Jhonny</b><small>Escribir por WhatsApp</small></span></a><a class="wa" href="https://w.app/rjyhcw" target="_blank" rel="noopener"><span class="ic">${WA}</span><span><b>Deyvi</b><small>Escribir por WhatsApp</small></span></a></div>`},
 empresa:{t:"La empresa",d:"Quiénes somos",k:"inst",p:5,g:[
- {i:[{t:"Misión y visión",k:"inst",u:""},{t:"ADN Capacitación",k:"star",u:""}]}]}
+ {i:[{t:"Cultura de servicio",k:"heart",o:"cultura",f:1},{t:"Misión y visión",k:"inst",u:""},{t:"Himno MARTIN",k:"music",u:""},{t:"ADN Capacitación",k:"star",u:""}]}]},
+cultura:{t:"Cultura de servicio",d:"Nuestra forma de atender",k:"heart",p:4,b:"empresa",g:[
+ {i:[{t:"Identidad",k:"id",u:""},{t:"Historias que merecen ser contadas",k:"book",u:""}]}]},
+equipo:{t:"Equipo MARTIN",d:"Las personas que hacen MARTIN",k:"team",p:3,g:[
+ {i:[{t:"Logros",k:"trophy",u:""},{t:"Cumpleaños",k:"cake",u:""},{t:"Fechas importantes",k:"cal",u:""},{t:"Fotos de recuerdo",k:"photo",u:""},{t:"Aportes Supervisores",k:"bulb",u:""}]}]},
+exhibidores:{t:"Exhibidores",d:"Elige tu sede",k:"grid",p:1,g:[
+ {i:[{t:"Villa el Salvador",k:"pin",u:""},{t:"Puente Piedra",k:"pin",u:""},{t:"Arequipa",k:"pin",u:""},{t:"Piura",k:"pin",u:""}]}]}
 };
 /* ================================================================ */
 const PAL=[["#f07d00","#c44f00"],["#1e63e0","#0f3a9e"],["#00a047","#06692f"],["#8a3fe0","#5a1fa8"],["#e0264f","#a3102f"],["#0aa6a6","#067272"]];
@@ -287,19 +350,31 @@ star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.
 sim:'<path d="M3 4h18v12H3zM8 20h8M12 16v4"/>',loop:'<path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/>',doc:'<path d="M7 3h10v18H7zM10 8h4M10 12h4M10 16h2"/>',
 game:'<path d="M6 8h12a4 4 0 0 1 4 4v2a3 3 0 0 1-5 2l-1-1H8l-1 1a3 3 0 0 1-5-2v-2a4 4 0 0 1 4-4zM8 11v3M6.5 12.5h3M16 12h.01M18 13h.01"/>',
 clip:'<path d="M8 4h8v3H8zM6 5H5v16h14V5h-1M9 12h6M9 16h6"/>',chart:'<path d="M3 21h18M6 21V12M11 21V5M16 21v-7"/>',
-flag:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',cap:'<path d="M2 9l10-5 10 5-10 5-10-5zM6 11v5c3 2 9 2 12 0v-5"/>',tag:'<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1"/>',photo:'<rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/>',more:'<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/>',inst:'<path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/>'};
+flag:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',cap:'<path d="M2 9l10-5 10 5-10 5-10-5zM6 11v5c3 2 9 2 12 0v-5"/>',tag:'<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1"/>',photo:'<rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/>',more:'<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/>',inst:'<path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/>',
+cross:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/><path fill="#fff" d="M15 3h6v6h-6zM3 15h6v6H3zM9 9h6v6H9z"/>',
+heart:'<path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/>',
+music:'<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+team:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.3c2.2.7 3.5 2.6 3.5 5.7"/>',
+trophy:'<path d="M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3M12 14v4M8 21h8M9 18h6"/>',
+cake:'<path d="M4 21h16v-7H4zM4 17c2 1.5 4 1.5 4 0s2-1.5 4 0 2 1.5 4 0 3-1.5 4 0M12 14V9M12 6.5c1-.9 1-1.8 0-3-1 1.2-1 2.1 0 3z"/>',
+cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+id:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.5 16c.6-1.8 1.9-2.6 3.5-2.6s2.9.8 3.5 2.6M14.5 10h4M14.5 14h3"/>',
+bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
+pin:'<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>'};
 const $=id=>document.getElementById(id),dlg=$("dlg"),tt=$("toast");
 const svg=k=>`<svg viewBox="0 0 24 24">${IC[k]}</svg>`,sty=p=>`--c:${PAL[p][0]};--c2:${PAL[p][1]}`;
 function toast(m){tt.textContent=m;tt.classList.add("on");setTimeout(()=>tt.classList.remove("on"),2200)}
-const btn=(s,p,c)=>`<button class="bg bt${c?" "+c:""}" style="${sty(p%6)}" data-u="${s.u||""}"${s.o?` data-open="${s.o}"`:""}><span class="ic">${svg(s.k)}</span><b>${s.t}</b></button>`;
+const btn=(s,p,c)=>`<button class="bg bt${c?" "+c:""}" style="${sty(p%6)}" data-u="${s.u||""}"${s.pw?' data-pw="1"':""}${s.o?` data-open="${s.o}"`:""}><span class="ic">${svg(s.k)}</span><b>${s.t}</b></button>`;
 $("tienda").innerHTML=`<button class="bg feat" style="${sty(0)}" data-u="${TIENDA[0].u}"><i>MÁS USADO</i><span class="ic">${svg("calc")}</span><span><b>${TIENDA[0].t}</b><small>Toca para entrar</small></span><span class="ch">›</span></button><div class="quick">${TIENDA.slice(1).map((s,n)=>btn(s,n+1,n>=2?"sm":"")).join("")}</div>`;
 $("secs").innerHTML=["ingreso","escuela","eval"].map(id=>{const s=SEC[id];return `<button class="bg sec" style="${sty(s.p)}" data-open="${id}"><span class="ic">${svg(s.k)}</span><span><b>${s.t}</b><small>${s.d}</small></span><span class="ch">›</span></button>`}).join("");
-document.querySelector(".emp").innerHTML=`<span class="ic">${svg("inst")}</span><span><b>La empresa</b><small>Misión, visión y ADN</small></span><span class="ch">›</span>`;
+const EMP=(k,t,d)=>`<span class="ic">${svg(k)}</span><span><b>${t}</b><small>${d}</small></span><span class="ch">›</span>`;
+document.querySelector('.emp[data-open="equipo"]').innerHTML=EMP("team","Equipo MARTIN","Logros, cumpleaños y recuerdos");
+document.querySelector('.emp[data-open="empresa"]').innerHTML=EMP("inst","La empresa","Misión, visión y ADN");
 function open_(id){
   const s=SEC[id];if(!s)return;let n=s.p;
   dlg.style.cssText=sty(s.p);
   $("dh").innerHTML=`<span class="ic">${svg(s.k)}</span><div><h3>${s.t}</h3><p>${s.d}</p></div><button class="x" aria-label="Cerrar">✕</button>`;
-  $("db").innerHTML=s.h||s.g.map(g=>(g.h?`<div class="gl">${g.h}</div>`:"")+`<div class="tg">${g.i.map(x=>btn(x,n++)).join("")}</div>`).join("");
+  $("db").innerHTML=(s.b?`<button class="back" data-open="${s.b}">‹ Volver</button>`:"")+(s.h||s.g.map(g=>(g.h?`<div class="gl">${g.h}</div>`:"")+`<div class="tg">${g.i.map(x=>btn(x,n++,x.f?"hl":"")).join("")}</div>`).join(""));
   if(!dlg.open)dlg.showModal();
 }
 const q=$("q"),res=$("res"),home=$("home");
@@ -307,15 +382,15 @@ q.addEventListener("input",()=>{
   const v=q.value.trim().toLowerCase();home.style.display=v?"none":"";res.style.display=v?"block":"none";if(!v)return;
   const all=TIENDA.map(s=>({s,w:"Asesores en tienda",p:0}));
   Object.values(SEC).forEach(c=>c.g.forEach(g=>g.i.forEach(s=>all.push({s,w:c.t+(g.h?" · "+g.h:""),p:c.p}))));
-  const h=all.filter(a=>(a.s.t+" "+a.w).toLowerCase().includes(v)).map(a=>`<button class="rs" style="--c:${PAL[a.p][0]}" data-u="${a.s.u||""}"${a.s.o?` data-open="${a.s.o}"`:""}>${a.s.t}<small>${a.w}</small></button>`).join("");
+  const h=all.filter(a=>(a.s.t+" "+a.w).toLowerCase().includes(v)).map(a=>`<button class="rs" style="--c:${PAL[a.p][0]}" data-u="${a.s.u||""}"${a.s.pw?' data-pw="1"':""}${a.s.o?` data-open="${a.s.o}"`:""}>${a.s.t}<small>${a.w}</small></button>`).join("");
   res.innerHTML=h||'<p style="text-align:center;color:var(--mu)">Sin resultados</p>';
 });
 document.addEventListener("click",e=>{
-  const go=e.target.closest("[data-go]");
-  if(go){scrollTo({top:0,behavior:"smooth"});if(go.dataset.go=="q")setTimeout(()=>q.focus(),350);return}
+  const gt=e.target.closest("[data-go]");
+  if(gt){scrollTo({top:0,behavior:"smooth"});if(gt.dataset.go=="q")setTimeout(()=>q.focus(),350);return}
   const o=e.target.closest("[data-open]");if(o){open_(o.dataset.open);return}
   const b=e.target.closest("[data-u]");
-  if(b){b.dataset.u?location.href=b.dataset.u:toast("Enlace por configurar");return}
+  if(b){if(b.dataset.pw)askPw(b.dataset.u);else go(b.dataset.u);return}
   if(e.target.closest(".x")||e.target===dlg)dlg.close();
 });
 const root=document.documentElement,tb=$("theme");
@@ -332,10 +407,10 @@ const audio=new Audio(MUSICA),mb=$("mbtn"),mm=$("mmute"),mv=$("mvol"),mp=$("mpan
 audio.loop=true;audio.preload="auto";
 let vol=.15;try{const v=sessionStorage.getItem("vol");if(v!==null&&!isNaN(+v))vol=+v}catch(e){}
 audio.volume=vol;mv.value=vol;
-const musUI=()=>{const on=!audio.paused&&!audio.muted&&audio.volume>0;mb.innerHTML=on?SPK_ON:SPK_OFF;mm.innerHTML=on?SPK_ON:SPK_OFF;mm.setAttribute("aria-pressed",on);mm.title=on?"Silenciar":"Activar sonido";pct.textContent=Math.round(audio.volume*100)+"%"};
+const musUI=()=>{const on=!audio.paused&&!audio.muted&&audio.volume>0;mb.innerHTML=on?SPK_ON:SPK_OFF;mm.innerHTML=on?SPK_ON:SPK_OFF;mm.setAttribute("aria-pressed",on);mm.title=on?"Silenciar":"Activar sonido";pct.textContent=Math.round(vol*100)+"%"};
 const play=()=>audio.play().then(musUI).catch(musUI);
 mm.addEventListener("click",()=>{if(audio.paused){audio.muted=false;play()}else{audio.muted=!audio.muted;musUI()}});
-mv.addEventListener("input",()=>{audio.volume=+mv.value;if(+mv.value>0)audio.muted=false;try{sessionStorage.setItem("vol",mv.value)}catch(e){}if(audio.paused&&+mv.value>0)play();else musUI()});
+mv.addEventListener("input",()=>{vol=+mv.value;clearInterval(fadeT);audio.volume=vol;if(+mv.value>0)audio.muted=false;try{sessionStorage.setItem("vol",mv.value)}catch(e){}if(audio.paused&&+mv.value>0)play();else musUI()});
 const panel=open=>{mp.hidden=!open;mb.setAttribute("aria-expanded",open)};
 mb.addEventListener("click",e=>{e.stopPropagation();panel(mp.hidden)});
 document.addEventListener("click",e=>{if(!mp.hidden&&!e.target.closest("#mwrap"))panel(false)});
@@ -362,6 +437,36 @@ if(gate){
   $("gpad").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b)key(b.dataset.k)});
   document.addEventListener("keydown",e=>{if(/^\d$/.test(e.key))key(e.key);else if(e.key==="Backspace")key("del")});
 }else{audio.play().catch(()=>{})}
+
+/* ===== Fade de música al salir, clave de simuladores y carta ===== */
+let fadeT,leaving=false,musicOn=false;
+function fade(to,ms,done){clearInterval(fadeT);const from=audio.volume,t0=performance.now();fadeT=setInterval(()=>{const k=Math.min(1,(performance.now()-t0)/ms);audio.volume=Math.max(0,Math.min(1,from+(to-from)*k));if(k>=1){clearInterval(fadeT);done&&done()}},40)}
+function go(u){
+  if(!u){toast("Enlace por configurar");return}
+  if(/^https:\/\/drive\.google\.com\//.test(u)){const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener noreferrer";document.body.appendChild(a);a.click();a.remove();return}
+  if(leaving)return;
+  if(!audio.paused&&!audio.muted&&audio.volume>0){leaving=true;musicOn=true;let d=false;const nav=()=>{if(!d){d=true;location.href=u}};fade(0,900,nav);setTimeout(nav,1300)}
+  else location.href=u;
+}
+addEventListener("pageshow",e=>{if(e.persisted){leaving=false;clearInterval(fadeT);audio.volume=vol;mv.value=vol;if(musicOn)play();musUI()}});
+const pw=$("pw"),pwi=$("pwi"),pwe=$("pwe");let pwu="";
+function askPw(u){pwu=u;pwi.value="";pwe.textContent="";pw.showModal();setTimeout(()=>pwi.focus(),60)}
+function pwOk(){
+  if(pwi.value===CLAVE){pw.close();go(pwu)}
+  else{pwe.textContent="Clave incorrecta. Inténtalo de nuevo.";pwi.value="";pwi.classList.remove("shake");void pwi.offsetWidth;pwi.classList.add("shake");pwi.focus()}
+}
+$("pwb").addEventListener("click",pwOk);
+pwi.addEventListener("keydown",e=>{if(e.key==="Enter")pwOk()});
+$("px").addEventListener("click",()=>pw.close());
+pw.addEventListener("click",e=>{if(e.target===pw)pw.close()});
+const love=$("love"),letter=$("letter"),lcard=$("lcard");
+function loveOpen(){love.hidden=false;love.classList.remove("card");letter.hidden=false;letter.classList.remove("go");lcard.hidden=true}
+function loveClose(){love.hidden=true;$("hfab").style.display="none"}
+$("hfab").addEventListener("click",loveOpen);
+letter.addEventListener("click",()=>{$("lmsg").textContent=MENSAJES[Math.floor(Math.random()*MENSAJES.length)];letter.classList.add("go");setTimeout(()=>{letter.hidden=true;lcard.hidden=false;love.classList.add("card")},380)});
+$("lx").addEventListener("click",loveClose);$("lcx").addEventListener("click",loveClose);
+love.addEventListener("click",e=>{if(e.target===love)loveClose()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!love.hidden)loveClose()});
 </script>
 </body>
 </html>
