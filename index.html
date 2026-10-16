@@ -119,7 +119,10 @@ box-shadow:0 0 0 2px rgba(240,125,0,.35),0 16px 30px -12px var(--o);animation:hl
 .tg .bt.hl b{font-size:1.12rem;font-weight:800;margin-top:0}
 @keyframes hlsh{from{background-position:130% 0}to{background-position:-130% 0}}
 @keyframes hlglow{0%,100%{box-shadow:0 0 0 2px rgba(240,125,0,.3),0 14px 26px -12px var(--o)}50%{box-shadow:0 0 0 5px rgba(240,125,0,.18),0 0 26px 2px rgba(255,170,60,.65)}}
-@media (prefers-reduced-motion:reduce){.tg .bt.hl{animation:none}}
+.tg .bt.spk{background:linear-gradient(110deg,transparent 42%,rgba(255,184,77,.30) 50%,transparent 58%) 130% 0/260% 100% no-repeat,var(--card);animation:spks 4.2s linear infinite,spkg 3s ease-in-out infinite}
+@keyframes spks{from{background-position:130% 0,0 0}to{background-position:-130% 0,0 0}}
+@keyframes spkg{0%,100%{box-shadow:0 1px 2px rgba(16,40,26,.06),0 10px 22px -14px rgba(16,40,26,.35)}50%{box-shadow:0 0 0 1px var(--c),0 0 16px 1px rgba(255,170,60,.45)}}
+@media (prefers-reduced-motion:reduce){.tg .bt.hl,.tg .bt.spk{animation:none}}
 
 /* Pantalla de PIN */
 body.locked{overflow:hidden}
@@ -317,33 +320,26 @@ const WA='<svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.4z"
 const TIENDA=[
 {t:"Calculador de materiales",k:"calc",u:""},
 {t:"Consulta de productos",k:"search",u:"https://capacitacion3vesmartin-ves.github.io/consultaproductoscapa/"},
-{t:"Exhibidores",k:"grid",o:"exhibidores"},
+{t:"Exhibidores",k:"grid",u:"https://capacitacion3vesmartin-ves.github.io/mostrariossedes/"},
 {t:"Catálogos de productos",k:"book",u:"https://drive.google.com/drive/folders/1hvTK8ydHCbhY2HtKhfhAm_-3nO4E4W6e?usp=sharing"},
 {t:"Fichas técnicas",k:"file",u:"https://drive.google.com/drive/folders/1aGtX8XCEqWr4Bi82P5fSME4c4i97bVbk?usp=sharing"},
 {t:"Más herramientas",k:"more",o:"mas"}];
 const REP=[{t:"Actividades de repaso",k:"loop",u:""},{t:"Repaso Documentación",k:"doc",u:""},{t:"Recursos dinámicos",k:"cross",u:""}];
-const COM=[{t:"Promociones",k:"cap",u:""},{t:"Mis recuerdos",k:"photo",u:""}];
 const SEC={
 ingreso:{t:"Capacitación de ingreso",d:"Tu primer recorrido como asesor",k:"flag",p:1,g:[
- {i:[{t:"Mis calificaciones",k:"star",u:"https://capacitacion3vesmartin-ves.github.io/capacitaciondeingreso/"},{t:"Diapositivas",k:"map",u:"https://capacitacion3vesmartin-ves.github.io/diapositivascapacitaciondeingreso/"}]},
- {h:"Simuladores Sistemas",i:[{t:"Simulador Oracle",k:"sim",pw:1,u:"https://capacitacion3vesmartin-ves.github.io/simuladororacle/"},{t:"Simulador Optiplanning",k:"sim",pw:1,u:""},{t:"Simulador factura de contingencia",k:"sim",pw:1,u:""}]},
- {h:"Repaso de temas",i:REP},
- {h:"Comunidad",i:COM}]},
+ {i:[{t:"Mis calificaciones",k:"star",u:"https://capacitacion3vesmartin-ves.github.io/capacitaciondeingreso/"},{t:"Diapositivas",k:"map",u:"https://capacitacion3vesmartin-ves.github.io/diapositivascapacitaciondeingreso/"},{t:"Promociones",k:"cap",u:"https://capacitacion3vesmartin-ves.github.io/fotospromocionesdeingreso/"}]},
+ {h:"Simuladores Sistemas",i:[{t:"Simulador Oracle",k:"sim",pw:1,u:"https://capacitacion3vesmartin-ves.github.io/simuladororacle/"},{t:"Simulador Optiplanning",k:"sim",pw:1,u:""}]},
+ {h:"Repaso de temas",i:REP}]},
 escuela:{t:"Escuela de entrenamiento",d:"Notas y refuerzo de conocimientos",k:"cap",p:2,g:[
  {i:[{t:"Mis calificaciones",k:"star",u:"https://capacitacion3vesmartin-ves.github.io/asesorescuelaentrenamientorepmartin/"},{t:"El desafío",k:"reto",u:""}]},
- {h:"Reforzar conocimientos",i:REP},
- {h:"Comunidad",i:COM}]},
+ {h:"Reforzar conocimientos",i:REP}]},
 eval:{t:"Evaluaciones generales",d:"Balotario y resultados",k:"clip",p:4,g:[
  {i:[{t:"Balotario",k:"clip",u:""},{t:"Resultados",k:"chart",u:""}]}]},
 mas:{t:"Más herramientas",d:"Próximamente",k:"more",p:3,g:[],h:`<div class="soon"><b>Próximamente…</b><p>Pero si tienes una idea, déjanos tus sugerencias:</p></div><div class="wa-wrap"><a class="wa" href="https://w.app/dl4j9e" target="_blank" rel="noopener"><span class="ic">${WA}</span><span><b>Jhonny</b><small>Escribir por WhatsApp</small></span></a><a class="wa" href="https://w.app/rjyhcw" target="_blank" rel="noopener"><span class="ic">${WA}</span><span><b>Deyvi</b><small>Escribir por WhatsApp</small></span></a></div>`},
 empresa:{t:"La empresa",d:"Quiénes somos",k:"inst",p:5,g:[
- {i:[{t:"Cultura de servicio",k:"heart",o:"cultura",f:1},{t:"Misión y visión",k:"inst",u:""},{t:"Himno MARTIN",k:"music",u:""},{t:"ADN Capacitación",k:"star",u:""}]}]},
-cultura:{t:"Cultura de servicio",d:"Nuestra forma de atender",k:"heart",p:4,b:"empresa",g:[
- {i:[{t:"Identidad",k:"id",u:""},{t:"Historias que merecen ser contadas",k:"book",u:""}]}]},
+ {i:[{t:"Cultura de servicio",k:"heart",u:""},{t:"Identidad",k:"id",u:"https://capacitacion3vesmartin-ves.github.io/identidadmartin/"},{t:"Misión y visión",k:"inst",u:""},{t:"Himno MARTIN",k:"music",u:"https://capacitacion3vesmartin-ves.github.io/himnomartin/"},{t:"ADN Capacitación",k:"star",u:""}]}]},
 equipo:{t:"Equipo MARTIN",d:"Las personas que hacen MARTIN",k:"team",p:3,g:[
- {i:[{t:"Logros",k:"trophy",u:""},{t:"Cumpleaños",k:"cake",u:""},{t:"Fechas importantes",k:"cal",u:""},{t:"Fotos de recuerdo",k:"photo",u:""},{t:"Aportes Supervisores",k:"bulb",u:""}]}]},
-exhibidores:{t:"Exhibidores",d:"Elige tu sede",k:"grid",p:1,g:[
- {i:[{t:"Villa el Salvador",k:"pin",u:""},{t:"Puente Piedra",k:"pin",u:""},{t:"Arequipa",k:"pin",u:""},{t:"Piura",k:"pin",u:""}]}]}
+ {i:[{t:"Logros",k:"trophy",u:"https://capacitacion3vesmartin-ves.github.io/logrosmartin/"},{t:"Cumpleaños",k:"cake",u:""},{t:"Fechas importantes",k:"cal",u:""},{t:"Fotos del recuerdo",k:"photo",u:"https://capacitacion3vesmartin-ves.github.io/fotospararecordarmartin/"},{t:"Historias que merecen ser contadas",k:"book",f:2,u:"https://capacitacion3vesmartin-ves.github.io/historiasquemerecensercontadasmartin/"},{t:"Aportes Supervisores",k:"bulb",u:""}]}]}
 };
 /* ================================================================ */
 const PAL=[["#f07d00","#c44f00"],["#1e63e0","#0f3a9e"],["#00a047","#06692f"],["#8a3fe0","#5a1fa8"],["#e0264f","#a3102f"],["#0aa6a6","#067272"]];
@@ -378,7 +374,7 @@ function open_(id){
   const s=SEC[id];if(!s)return;let n=s.p;
   dlg.style.cssText=sty(s.p);
   $("dh").innerHTML=`<span class="ic">${svg(s.k)}</span><div><h3>${s.t}</h3><p>${s.d}</p></div><button class="x" aria-label="Cerrar">✕</button>`;
-  $("db").innerHTML=(s.b?`<button class="back" data-open="${s.b}">‹ Volver</button>`:"")+(s.h||s.g.map(g=>(g.h?`<div class="gl">${g.h}</div>`:"")+`<div class="tg">${g.i.map(x=>btn(x,n++,x.f?"hl":"")).join("")}</div>`).join(""));
+  $("db").innerHTML=(s.b?`<button class="back" data-open="${s.b}">‹ Volver</button>`:"")+(s.h||s.g.map(g=>(g.h?`<div class="gl">${g.h}</div>`:"")+`<div class="tg">${g.i.map(x=>btn(x,n++,x.f==2?"spk":x.f?"hl":"")).join("")}</div>`).join(""));
   if(!dlg.open)dlg.showModal();
 }
 const q=$("q"),res=$("res"),home=$("home");
