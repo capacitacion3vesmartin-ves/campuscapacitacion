@@ -276,6 +276,53 @@ body.locked{overflow:hidden}
   footer{margin-top:48px;padding:32px 0 36px;border-top:1.5px solid var(--bd);font-size:.8rem}
   .toast{bottom:40px}
 }
+
+/* ===== Ventana Calculador de materiales ===== */
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(min-width:700px){.cg{grid-template-columns:repeat(6,1fr);gap:14px}}
+dialog.wide{max-width:min(1040px,96vw);border:3px solid var(--c)}
+.cfoot{margin:14px 2px 0;text-align:right;font-size:.74rem;font-weight:600;color:var(--mu)}
+dialog.wide .db{padding-top:18px}
+.ct{position:relative;aspect-ratio:1/1;width:100%;padding:0;border:0;border-radius:16px;overflow:hidden;cursor:pointer;background:var(--k,#f07d00);isolation:isolate;font-family:var(--f);color:#fff;box-shadow:0 6px 12px -8px rgba(0,0,0,.45);transition:transform .15s}
+.ct:active{transform:scale(.96)}
+.ct:focus-visible{outline:3px solid var(--o);outline-offset:3px}
+.ct img{position:absolute;left:5px;top:5px;width:calc(100% - 10px);height:calc(100% - 10px);object-fit:cover;border-radius:12px;z-index:1;display:block}
+.ct:before{content:"";position:absolute;left:-50%;top:-50%;width:200%;height:200%;z-index:0;pointer-events:none;background:conic-gradient(from 0deg,transparent 0 62%,rgba(255,255,255,.95) 80%,transparent 90% 100%);animation:ctr 2.8s linear infinite;animation-delay:var(--d,0s)}
+.ct b{position:absolute;left:5px;right:5px;bottom:5px;border-radius:0 0 12px 12px;z-index:3;padding:7px 4px 8px;font-size:.7rem;font-weight:800;line-height:1.15;text-align:center;background:#fff;color:#17261d}
+.ct .sp{position:absolute;z-index:2;width:14px;height:14px;background:#fff;filter:drop-shadow(0 0 3px #ffd08a) drop-shadow(0 0 5px #fff);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0;pointer-events:none;animation:ctw 2.4s ease-in-out infinite}
+.ct .s1{top:12%;left:15%;animation-delay:calc(var(--d,0s) + 0s)}
+.ct .s2{top:24%;right:14%;width:8px;height:8px;animation-delay:calc(var(--d,0s) + .8s)}
+.ct .s3{top:42%;left:46%;width:9px;height:9px;animation-delay:calc(var(--d,0s) + 1.5s)}
+.ct .s4{top:55%;left:12%;width:9px;height:9px;animation-delay:calc(var(--d,0s) + 1.1s)}
+.ct .s5{top:8%;left:58%;width:10px;height:10px;animation-delay:calc(var(--d,0s) + 1.9s)}
+@keyframes ctr{to{transform:rotate(360deg)}}
+@keyframes cts{0%{transform:translateX(-160%) skewX(-18deg)}45%,100%{transform:translateX(420%) skewX(-18deg)}}
+@keyframes ctw{0%,100%{opacity:0;transform:scale(.2) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(45deg)}}
+@keyframes ctg{0%,100%{box-shadow:0 0 6px 0 var(--k),0 10px 18px -12px rgba(0,0,0,.55)}50%{box-shadow:0 0 16px 3px var(--k),0 10px 18px -12px rgba(0,0,0,.55)}}
+
+/* Encabezado con brillo */
+.dh.glow{overflow:hidden}
+.dh.glow .hs{position:absolute;z-index:0;width:18px;height:18px;background:#fff;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0;pointer-events:none;filter:drop-shadow(0 0 5px #fff);animation:ctw 2.2s ease-in-out infinite}
+.dh.glow .h1{top:14%;left:38%}
+.dh.glow .h2{top:58%;left:56%;width:12px;height:12px;animation-delay:.7s}
+.dh.glow .h3{top:20%;right:22%;width:15px;height:15px;animation-delay:1.3s}
+.dh.glow .h4{top:62%;left:22%;width:10px;height:10px;animation-delay:1.8s}
+.dh.glow>*:not(.hs){position:relative;z-index:1}
+.dh.glow .x{position:absolute}
+.lkq{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:340px;margin:0 auto 16px}
+.lkc{aspect-ratio:1/1;border-radius:20px;border:2px solid var(--o);background:var(--o);color:#fff;font:700 .92rem/1.15 var(--f);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:8px;text-align:center;cursor:pointer;box-shadow:0 12px 20px -14px var(--o);touch-action:manipulation}
+.lkc svg{width:42px;height:42px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lkc.lk2{background:var(--card);color:var(--o)}
+.lkc:active{transform:scale(.96)}
+.lkc:focus-visible{outline:3px solid var(--o);outline-offset:3px}
+#lk .back{display:flex;margin:0 auto}
+.rs{display:flex;align-items:center;gap:12px}
+.rs .ic{width:44px;height:44px;border-radius:12px;box-shadow:none}
+.rs .ic svg{width:23px;height:23px}
+.rs .rimg{padding:2px}
+.rs .rimg img{width:100%;height:100%;object-fit:cover;border-radius:10px;display:block}
+.rtx{min-width:0}
+.rs b{display:block;font-weight:600}
 </style>
 </head>
 <body class="locked">
@@ -304,6 +351,7 @@ body.locked{overflow:hidden}
 </main>
 <dialog id="dlg"><div class="dh" id="dh"></div><div class="db" id="db"></div></dialog>
 <dialog id="pw" style="--c:#f07d00"><div class="dh"><span class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><h3>Acceso con clave</h3><p>Ingresa la clave para continuar</p></div><button class="px" id="px" type="button" aria-label="Cerrar">✕</button></div><div class="db"><div class="pww"><input class="pwi" id="pwi" type="password" placeholder="Clave" autocomplete="off"><button class="pwe" id="pwt" type="button" aria-label="Mostrar clave" title="Mostrar clave"></button></div><div id="pwe" role="alert"></div><button class="pwb" id="pwb" type="button">Ingresar</button></div></dialog>
+<dialog id="lk" style="--c:#f07d00"><div class="dh"><span class="ic"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><div><h3>¿Cómo quieres abrirlo?</h3><p id="lkn"></p></div><button class="px" id="lkx" type="button" aria-label="Cerrar">✕</button></div><div class="db"><div class="lkq"><button class="lkc" id="lkgo" type="button"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Ir al enlace</span></button><button class="lkc lk2" id="lknew" type="button"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span>Nueva pestaña</span></button></div><button class="back" id="lkback" type="button">‹ Volver</button></div></dialog>
 <button class="hfab" id="hfab" type="button" aria-label="Abrir mensaje especial"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></svg></button>
 <div id="love" hidden role="dialog" aria-modal="true" aria-label="Mensaje especial">
 <button class="lx" id="lx" type="button" aria-label="Cerrar">✕</button>
@@ -318,7 +366,7 @@ const CLAVE="martin123"; /* clave de los simuladores con pw:1 */
 const MENSAJES=["Cada día que enseñas y aprendes, dejas una huella en quienes te rodean. Gracias por ser parte de MARTIN: tu esfuerzo y tu sonrisa hacen grande a este equipo. Hoy es un buen día para brillar."];
 const WA='<svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9.2c.4 2.6 2.9 5.1 5.6 5.6l1.4-1.4-2-1-1 .8c-1-.5-2-1.5-2.5-2.5l.8-1-1-2z"/></svg>';
 const TIENDA=[
-{t:"Calculador de materiales",k:"calc",u:""},
+{t:"Calculador de materiales",k:"calc",o:"calc"},
 {t:"Consulta de productos",k:"search",u:"https://capacitacion3vesmartin-ves.github.io/consultaproductoscapa/"},
 {t:"Mostrarios",k:"grid",u:"https://capacitacion3vesmartin-ves.github.io/mostrariossedes/"},
 {t:"Catálogos de productos",k:"book",u:"https://drive.google.com/drive/folders/1hvTK8ydHCbhY2HtKhfhAm_-3nO4E4W6e?usp=sharing"},
@@ -326,6 +374,20 @@ const TIENDA=[
 {t:"Más herramientas",k:"more",o:"mas"}];
 const REP=[{t:"Actividades de repaso",k:"loop",u:""},{t:"Repaso Documentación",k:"doc",u:""},{t:"Recursos dinámicos",k:"cross",u:"https://capacitacion3vesmartin-ves.github.io/recursosdinamicoscapadeingreso/"}];
 const REP2=[{t:"Practica lo aprendido",k:"loop",u:""},{t:"Practicar documentación",k:"doc",u:""}];
+const CALC=[
+["Drywall","https://image2url.com/r2/default/images/1774567817888-18a163dc-8ebc-48b5-a753-cd496ad11a84.jpg","https://capacitacion3vesmartin-ves.github.io/calculadormartin-drywall/"],
+["Techos","https://www.image2url.com/r2/default/images/1792962933598-fd3f672e-f1c2-46ba-8d72-a527171edd2c.jpg","https://capacitacion3vesmartin-ves.github.io/calculadormartintechos/"],
+["Pisos SPC","https://image2url.com/r2/default/images/1774567995635-ddaef469-3709-4591-b27c-361bf01dc7ff.jpg","https://capacitacion3vesmartin-ves.github.io/calculadormartinpisosspc/"],
+["Pisos vinílicos","https://dhperu.com.pe/wp-content/uploads/2023/10/rollo_vinilico_3.jpg","https://capacitacion3vesmartin-ves.github.io/calculadormartinpisosvinilicos/"],
+["Cerámicos","https://image2url.com/r2/default/images/1774568100948-848f00af-860c-4a31-b2b2-e14671971f53.jpg","https://capacitacion3vesmartin-ves.github.io/calculadormartinceramicosyporcelanatos/"],
+["Wall Panel","https://image2url.com/r2/default/images/1774567937282-cd42ce02-d67f-453f-b464-fe4d843b3176.jpg","https://capacitacion3vesmartin-ves.github.io/calculadormartinwallpanel/"],
+["Cielo raso Baldosas","https://naveconperu.com/wp-content/uploads/2022/05/baldosas-gypsum-vynil-1.jpeg","https://capacitacion3vesmartin-ves.github.io/calculadormartincielorasobaldosas/"],
+["Cielo raso Drywall","https://tienda.buscalperu.com/wp-content/uploads/2021/08/CIELO-RASO-GYPLAC-102.jpg","https://capacitacion3vesmartin-ves.github.io/calculadormartin-cielorasodrywall/"],
+["Conversión de melamina","https://www.image2url.com/r2/default/images/1792963031516-0b79cb66-7127-4264-9097-0a927b17e9f2.jfif","https://capacitacion3vesmartin-ves.github.io/calculadormartinconversiondemelamina/"],
+["Retazos de melamina","https://www.image2url.com/r2/default/images/1792967883405-e21a7336-2fcb-468f-9664-cab619811fd0.png","https://jhonnyalarconq-blip.github.io/calculadormartinretazomelamina/"],
+["Descuento oferta","https://www.image2url.com/r2/default/images/1792963448631-f54c3587-3a7b-4268-b011-f37bfc75b562.png","https://jhonnyalarconq-blip.github.io/calculadormartinporcentajedescuento/"]];
+const CCOL=["#00a047","#8a3fe0","#1e63e0","#19b5f0","#e02020","#8b5a3c","#e0189b","#14b8a6","#f07d00","#ff7eb6","#f5c400"];
+const CALCH='<div class="cg">'+CALC.map((c,n)=>`<button type="button" class="ct" style="--d:${(n*.35).toFixed(2)}s;--k:${CCOL[n]}" data-u="${c[2]}"><img src="${c[1]}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><b>${c[0]}</b></button>`).join("")+'</div><div class="cfoot">Desarrollado por el Equipo de Capacitación</div>';
 const SEC={
 ingreso:{t:"Capacitación de ingreso",d:"Tu primer recorrido como asesor",k:"flag",p:1,g:[
  {i:[{t:"Mis calificaciones",k:"star",u:"https://capacitacion3vesmartin-ves.github.io/capacitaciondeingreso/"},{t:"Diapositivas",k:"map",u:"https://capacitacion3vesmartin-ves.github.io/diapositivascapacitaciondeingreso/"},{t:"Promociones",k:"cap",u:"https://capacitacion3vesmartin-ves.github.io/fotospromocionesdeingreso/"}]},
@@ -334,12 +396,13 @@ ingreso:{t:"Capacitación de ingreso",d:"Tu primer recorrido como asesor",k:"fla
 escuela:{t:"Escuela de entrenamiento",d:"Notas y refuerzo de conocimientos",k:"cap",p:2,g:[
  {i:[{t:"Mis calificaciones",k:"star",u:"https://capacitacion3vesmartin-ves.github.io/asesorescuelaentrenamientorepmartin/"},{t:"El desafío",k:"reto",u:""}]},
  {h:"Reforzar conocimientos",i:REP2}]},
+calc:{t:"Calculador de materiales",d:"Elige qué quieres calcular",k:"calc",p:0,g:[],h:CALCH},
 eval:{t:"Evaluaciones generales",d:"Balotario y resultados",k:"clip",p:4,u:"https://capacitacion3vesmartin-ves.github.io/resultadosconcursodeconocimientosmartin/",g:[]},
 mas:{t:"Más herramientas",d:"Próximamente",k:"more",p:3,g:[],h:`<div class="soon"><b>Próximamente…</b><p>Pero si tienes una idea, déjanos tus sugerencias:</p></div><div class="wa-wrap"><a class="wa" href="https://w.app/dl4j9e" target="_blank" rel="noopener"><span class="ic">${WA}</span><span><b>Jhonny</b><small>Escribir por WhatsApp</small></span></a><a class="wa" href="https://w.app/rjyhcw" target="_blank" rel="noopener"><span class="ic">${WA}</span><span><b>Deyvi</b><small>Escribir por WhatsApp</small></span></a></div>`},
 empresa:{t:"La empresa",d:"Quiénes somos",k:"inst",p:5,g:[
- {i:[{t:"Cultura de servicio",k:"heart",u:""},{t:"Identidad",k:"id",u:"https://capacitacion3vesmartin-ves.github.io/identidadmartin/"},{t:"Misión y visión",k:"inst",u:""},{t:"Himno MARTIN",k:"music",u:"https://capacitacion3vesmartin-ves.github.io/himnomartin/"},{t:"ADN Capacitación",k:"star",u:""}]}]},
+ {i:[{t:"Identidad",k:"id",u:"https://capacitacion3vesmartin-ves.github.io/identidadmartin/"},{t:"Misión y visión",k:"inst",u:""},{t:"Himno MARTIN",k:"music",u:"https://capacitacion3vesmartin-ves.github.io/himnomartin/"},{t:"Cultura de servicio",k:"heart",u:""},{t:"Agradecimientos",k:"star",u:""}]}]},
 equipo:{t:"Equipo MARTIN",d:"Las personas que hacen MARTIN",k:"team",p:3,g:[
- {i:[{t:"Logros",k:"trophy",u:"https://capacitacion3vesmartin-ves.github.io/logrosmartin/"},{t:"Cumpleaños",k:"cake",u:"https://capacitacion3vesmartin-ves.github.io/cumplea-osrepmartin/"},{t:"Fechas importantes",k:"cal",u:""},{t:"Fotos del recuerdo",k:"photo",u:"https://capacitacion3vesmartin-ves.github.io/fotospararecordarmartin/"},{t:"Historias que merecen ser contadas",k:"book",f:2,u:"https://capacitacion3vesmartin-ves.github.io/historiasquemerecensercontadasmartin/"},{t:"Aportes Supervisores",k:"bulb",u:""}]}]}
+ {i:[{t:"Cumpleaños",k:"cake",u:"https://capacitacion3vesmartin-ves.github.io/cumplea-osrepmartin/"},{t:"Fotos del recuerdo",k:"photo",u:"https://capacitacion3vesmartin-ves.github.io/fotospararecordarmartin/"},{t:"Historias que merecen ser contadas",k:"book",f:2,u:"https://capacitacion3vesmartin-ves.github.io/historiasquemerecensercontadasmartin/"},{t:"Logros",k:"trophy",u:"https://capacitacion3vesmartin-ves.github.io/logrosmartin/"},{t:"Aportes Supervisores",k:"bulb",u:""}]}]}
 };
 /* ================================================================ */
 const PAL=[["#f07d00","#c44f00"],["#1e63e0","#0f3a9e"],["#00a047","#06692f"],["#8a3fe0","#5a1fa8"],["#e0264f","#a3102f"],["#0aa6a6","#067272"]];
@@ -365,24 +428,27 @@ const $=id=>document.getElementById(id),dlg=$("dlg"),tt=$("toast");
 const svg=k=>`<svg viewBox="0 0 24 24">${IC[k]}</svg>`,sty=p=>`--c:${PAL[p][0]};--c2:${PAL[p][1]}`;
 function toast(m){tt.textContent=m;tt.classList.add("on");setTimeout(()=>tt.classList.remove("on"),2200)}
 const btn=(s,p,c)=>`<button class="bg bt${c?" "+c:""}" style="${sty(p%6)}" data-u="${s.u||""}"${s.pw?' data-pw="1"':""}${s.o?` data-open="${s.o}"`:""}><span class="ic">${svg(s.k)}</span><b>${s.t}</b></button>`;
-$("tienda").innerHTML=`<button class="bg feat" style="${sty(0)}" data-u="${TIENDA[0].u}"><i>MÁS USADO</i><span class="ic">${svg("calc")}</span><span><b>${TIENDA[0].t}</b><small>Toca para entrar</small></span><span class="ch">›</span></button><div class="quick">${TIENDA.slice(1).map((s,n)=>btn(s,n+1,n>=2?"sm":"")).join("")}</div>`;
+$("tienda").innerHTML=`<button class="bg feat" style="${sty(0)}" data-open="calc"><i>MÁS USADO</i><span class="ic">${svg("calc")}</span><span><b>${TIENDA[0].t}</b><small>Toca para entrar</small></span><span class="ch">›</span></button><div class="quick">${TIENDA.slice(1).map((s,n)=>btn(s,n+1,n>=2?"sm":"")).join("")}</div>`;
 $("secs").innerHTML=["ingreso","escuela","eval"].map(id=>{const s=SEC[id];return `<button class="bg sec" style="${sty(s.p)}" ${s.u?`data-u="${s.u}"`:`data-open="${id}"`}><span class="ic">${svg(s.k)}</span><span><b>${s.t}</b><small>${s.d}</small></span><span class="ch">›</span></button>`}).join("");
 const EMP=(k,t,d)=>`<span class="ic">${svg(k)}</span><span><b>${t}</b><small>${d}</small></span><span class="ch">›</span>`;
 document.querySelector('.emp[data-open="equipo"]').innerHTML=EMP("team","Equipo MARTIN","Logros, cumpleaños y recuerdos");
 document.querySelector('.emp[data-open="empresa"]').innerHTML=EMP("inst","La empresa","Misión, visión y ADN");
 function open_(id){
   const s=SEC[id];if(!s)return;let n=s.p;
-  dlg.style.cssText=sty(s.p);
+  dlg.style.cssText=sty(s.p);dlg.classList.toggle("wide",id==="calc");
   $("dh").innerHTML=`<span class="ic">${svg(s.k)}</span><div><h3>${s.t}</h3><p>${s.d}</p></div><button class="x" aria-label="Cerrar">✕</button>`;
+  $("dh").classList.toggle("glow",id==="calc");if(id==="calc")$("dh").insertAdjacentHTML("beforeend",'<i class="hs h1"></i><i class="hs h2"></i><i class="hs h3"></i><i class="hs h4"></i>');
   $("db").innerHTML=(s.b?`<button class="back" data-open="${s.b}">‹ Volver</button>`:"")+(s.h||s.g.map(g=>(g.h?`<div class="gl">${g.h}</div>`:"")+`<div class="tg">${g.i.map(x=>btn(x,n++,x.f==2?"spk":x.f?"hl":"")).join("")}</div>`).join(""));
   if(!dlg.open)dlg.showModal();
 }
 const q=$("q"),res=$("res"),home=$("home");
 q.addEventListener("input",()=>{
-  const v=q.value.trim().toLowerCase();home.style.display=v?"none":"";res.style.display=v?"block":"none";if(!v)return;
+  const N=x=>x.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();const v=N(q.value.trim());home.style.display=v?"none":"";res.style.display=v?"block":"none";if(!v)return;
   const all=TIENDA.map(s=>({s,w:"Asesores en tienda",p:0}));
-  Object.values(SEC).forEach(c=>{if(c.u)all.push({s:{t:c.t,u:c.u},w:"Mi formación",p:c.p});c.g.forEach(g=>g.i.forEach(s=>all.push({s,w:c.t+(g.h?" · "+g.h:""),p:c.p})))});
-  const h=all.filter(a=>(a.s.t+" "+a.w).toLowerCase().includes(v)).map(a=>`<button class="rs" style="--c:${PAL[a.p][0]}" data-u="${a.s.u||""}"${a.s.pw?' data-pw="1"':""}${a.s.o?` data-open="${a.s.o}"`:""}>${a.s.t}<small>${a.w}</small></button>`).join("");
+  CALC.forEach((c,n)=>all.push({s:{t:c[0],u:c[2],img:c[1]},w:"Calculador de materiales",p:0,c:CCOL[n]}));
+  const th=a=>a.s.img?`<span class="ic rimg"><img src="${a.s.img}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></span>`:(IC[a.s.k]?`<span class="ic">${svg(a.s.k)}</span>`:"");
+  Object.values(SEC).forEach(c=>{if(c.u)all.push({s:{t:c.t,u:c.u,k:c.k},w:"Mi formación",p:c.p});c.g.forEach(g=>g.i.forEach(s=>all.push({s,w:c.t+(g.h?" · "+g.h:""),p:c.p})))});
+  const h=all.filter(a=>N(a.s.t+" "+a.w).includes(v)).map(a=>`<button class="rs" style="--c:${a.c||PAL[a.p][0]}" data-u="${a.s.u||""}"${a.s.nc?' data-nc="1"':""}${a.s.pw?' data-pw="1"':""}${a.s.o?` data-open="${a.s.o}"`:""}>${th(a)}<span class="rtx"><b>${a.s.t}</b><small>${a.w}</small></span></button>`).join("");
   res.innerHTML=h||'<p style="text-align:center;color:var(--mu)">Sin resultados</p>';
 });
 document.addEventListener("click",e=>{
@@ -390,7 +456,7 @@ document.addEventListener("click",e=>{
   if(gt){scrollTo({top:0,behavior:"smooth"});if(gt.dataset.go=="q")setTimeout(()=>q.focus(),350);return}
   const o=e.target.closest("[data-open]");if(o){open_(o.dataset.open);return}
   const b=e.target.closest("[data-u]");
-  if(b){if(b.dataset.pw)askPw(b.dataset.u);else go(b.dataset.u);return}
+  if(b){if(!b.dataset.u){if(b.dataset.pw)askPw(b.dataset.u);else go(b.dataset.u)}else askLink(b);return}
   if(e.target.closest(".x")||e.target===dlg)dlg.close();
 });
 const root=document.documentElement,tb=$("theme");
@@ -449,10 +515,22 @@ function go(u){
   else location.href=u;
 }
 addEventListener("pageshow",e=>{if(e.persisted){leaving=false;clearInterval(fadeT);audio.volume=vol;mv.value=vol;if(musicOn)play();musUI()}});
-const pw=$("pw"),pwi=$("pwi"),pwe=$("pwe");let pwu="";
+const pw=$("pw"),pwi=$("pwi"),pwe=$("pwe");let pwu="",pwNew=false;
+function goNew(u){window.open(u,"_blank","noopener")}
+const lk=$("lk");let lku="",lkp=false;
+function askLink(b){
+  lku=b.dataset.u;lkp=!!b.dataset.pw;
+  const n=b.querySelector("b");$("lkn").textContent=(n?n.textContent:b.textContent).trim();
+  lk.showModal();
+}
+$("lkgo").addEventListener("click",()=>{lk.close();if(lkp){pwNew=false;askPw(lku)}else go(lku)});
+$("lknew").addEventListener("click",()=>{lk.close();if(lkp){pwNew=true;askPw(lku)}else goNew(lku)});
+$("lkx").addEventListener("click",()=>lk.close());
+$("lkback").addEventListener("click",()=>lk.close());
+lk.addEventListener("click",e=>{if(e.target===lk)lk.close()});
 function askPw(u){pwu=u;pwi.value="";if(typeof pwShow=="function")pwShow(false);pwe.textContent="";pw.showModal();setTimeout(()=>pwi.focus(),60)}
 function pwOk(){
-  if(pwi.value===CLAVE){pw.close();go(pwu)}
+  if(pwi.value===CLAVE){pw.close();const nw=pwNew;pwNew=false;nw?goNew(pwu):go(pwu)}
   else{pwe.textContent="Clave incorrecta. Inténtalo de nuevo.";pwi.value="";pwi.classList.remove("shake");void pwi.offsetWidth;pwi.classList.add("shake");pwi.focus()}
 }
 $("pwb").addEventListener("click",pwOk);
