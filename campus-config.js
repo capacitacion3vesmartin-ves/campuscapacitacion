@@ -262,10 +262,10 @@
     };
   }
   function setTxt(sel, txt) { var el = document.querySelector(sel); if (el && txt) el.textContent = txt; }
-  function aplicarTextos(d) {
+  function aplicarTextos(d, tema) {
     var c = d.config || {};
-    setTxt('.hero h2', c.hero_titulo);
-    setTxt('.hero > .hero-in > p', c.hero_subtitulo);
+    setTxt('.hero h2', (tema && tema.hero_titulo) || c.hero_titulo);
+    setTxt('.hero > .hero-in > p', (tema && tema.hero_subtitulo) || c.hero_subtitulo);
     setTxt('#gt', c.gate_titulo);
     setTxt('#gf p', c.gate_texto);
     var t1 = document.querySelector('#home > .ttl:nth-child(1)'), t2 = document.querySelector('#home > .ttl:nth-child(3)');
@@ -625,7 +625,7 @@
     var hoy = new Date();
     var tema = resolverTema(DATA, hoy);
     if (hooks && hooks.setData) { try { hooks.setData(build(DATA, tema, hoy)); } catch (e) { console.error('[campus] datos', e); } }
-    try { aplicarTextos(DATA); } catch (e) { console.error(e); }
+    try { aplicarTextos(DATA, tema); } catch (e) { console.error(e); }
     try { aplicarTema(DATA, tema); } catch (e) { console.error(e); }
     try { aviso(DATA, hoy); mantenimiento(DATA); badgePrev(DATA); } catch (e) { console.error(e); }
     iniciarGesto();
